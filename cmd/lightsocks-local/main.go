@@ -27,6 +27,7 @@ func main() {
 	// 启动 local 端并监听
 	lsLocal, err := lightsocks.NewLsLocal(config.Password, config.ListenAddr, config.RemoteAddr)
 	if err != nil {
+		log.Println("sqzxcv读取密码错误,错入原因如下:")
 		log.Fatalln(err)
 	}
 	log.Fatalln(lsLocal.Listen(func(listenAddr net.Addr) {

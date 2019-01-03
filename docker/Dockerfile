@@ -6,8 +6,8 @@ ARG TZ="Asia/Shanghai"
 
 ENV TZ ${TZ}
 ENV LIGHTSOCKS_VERSION 1.0.6
-ENV LIGHTSOCKS_DOWNLOAD_URL https://github.com/sqzxcv/lightsocks/releases/download/${LIGHTSOCKS_VERSION}/lightsocks_${LIGHTSOCKS_VERSION}_linux_amd64.tar.gz
-
+# ENV LIGHTSOCKS_DOWNLOAD_URL https://github.com/sqzxcv/lightsocks/releases/download/${LIGHTSOCKS_VERSION}/lightsocks_${LIGHTSOCKS_VERSION}_linux_amd64.tar.gz
+ENV LIGHTSOCKS_DOWNLOAD_URL https://codeload.github.com/sqzxcv/lightsocks/zip/master
 RUN apk upgrade --update \
     && apk add bash tzdata curl tar \
     && curl -sSLO ${LIGHTSOCKS_DOWNLOAD_URL} \
