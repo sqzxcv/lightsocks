@@ -77,3 +77,11 @@ services:
 **docker-compose 启动前需要先 `export LIGHT_MODULE=xxxx` 来指定运行模式；
 同样 server 启动前需要先启动一次生成配置文件，然后再修改 docker-compose 的端口映射后启动，
 关于 docker-compose 安装及使用这里不再详细阐述**
+
+
+## 常用命令:
+```sh
+docker-compose down && docker rmi mritd/lightsocks && export LIGHT_MODULE="lightsocks-local" && docker-compose up --force-recreate
+
+docker rmi lightsocks && docker run --name lsclient -v `pwd`:/root -p 443:443 --restart=always lightsocks lightsocks-local
+```
