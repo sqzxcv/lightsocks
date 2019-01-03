@@ -1,6 +1,7 @@
 package lightsocks
 
 import (
+	"log"
 	"encoding/binary"
 	"net"
 )
@@ -39,6 +40,7 @@ func (lsServer *LsServer) Listen(didListen func(listenAddr net.Addr)) error {
 // 解 SOCKS5 协议
 // https://www.ietf.org/rfc/rfc1928.txt
 func (lsServer *LsServer) handleConn(localConn *SecureTCPConn) {
+	log.Println("收到收到网络请求")
 	defer localConn.Close()
 	buf := make([]byte, 256)
 
