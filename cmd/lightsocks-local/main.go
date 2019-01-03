@@ -31,7 +31,7 @@ func main() {
 		log.Fatalln(err)
 	}
 	log.Fatalln(lsLocal.Listen(func(listenAddr net.Addr) {
-		log.Println("使用配置：", fmt.Sprintf(`
+		log.Println("sqzxcv--使用配置：", fmt.Sprintf(`
 本地监听地址 listen：
 %s
 远程服务地址 remote：
@@ -39,6 +39,6 @@ func main() {
 密码 password：
 %s
 	`, listenAddr, config.RemoteAddr, config.Password))
-		log.Printf("lightsocks-local:%s 启动成功 监听在 %s\n", version, listenAddr.String())
+		log.Printf("sqzxcv--lightsocks-local:%s 启动成功 监听在 %s\n", version, listenAddr.String())
 	}))
 }
