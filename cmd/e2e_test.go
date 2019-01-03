@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/gwuhaolin/lightsocks"
+	"github.com/sqzxcv/lightsocks"
 	"golang.org/x/net/proxy"
 	"io"
 	"log"

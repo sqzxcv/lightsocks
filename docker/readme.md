@@ -3,7 +3,7 @@
 lightsocks 的 docker 镜像采用当前目录下的 Dockerfile 创建，在安装有 docker 环境的机器上 build 即可
 
 ``` sh
-git clone https://github.com/gwuhaolin/lightsocks.git
+git clone https://github.com/sqzxcv/lightsocks.git
 cd lightsocks/docker
 docker build -t lightsocks .
 ```
