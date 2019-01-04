@@ -4546,5 +4546,8 @@ for (var i = 0; i < rules.length; i++) {
 }
 
 function FindProxyForURL(url, host) {
-    return proxy;
+    if (defaultMatcher.matchesAny(url, host) instanceof BlockingFilter) {
+        return proxy;
+    }
+    return direct;
 }
