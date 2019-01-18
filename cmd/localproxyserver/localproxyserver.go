@@ -1,25 +1,27 @@
-package main
+package localproxyserver
 
 import (
 	"fmt"
-	"github.com/sqzxcv/lightsocks"
-	"github.com/sqzxcv/lightsocks/cmd"
 	"log"
 	"net"
+
+	"github.com/sqzxcv/lightsocks"
+	"github.com/sqzxcv/lightsocks/cmd"
 )
 
 const (
-	DefaultListenAddr = ":7448"
+	defaultListenAddr = ":7448"
 )
 
 var version = "master"
 
-func main() {
+//StartLocalProxyServer 启动本地代理服务
+func StartLocalProxyServer() {
 	log.SetFlags(log.Lshortfile)
 
 	// 默认配置
 	config := &cmd.Config{
-		ListenAddr: DefaultListenAddr,
+		ListenAddr: defaultListenAddr,
 	}
 	// config.ReadConfig()
 	// config.SaveConfig()
