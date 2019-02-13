@@ -23,12 +23,13 @@ func StartLocalProxyServer() {
 	config := &cmd.Config{
 		ListenAddr: defaultListenAddr,
 	}
-	// config.ReadConfig()
-	// config.SaveConfig()
+	config.ReadConfig()
+	config.SaveConfig()
 
-	config.Password = "yshAwgIkaoBDJw2lq1yNUsZXu8vNPJP57LfvNmDphbXX23a6O4ZfnCAMBJ7TtL96LYPaeah15z8Gny9tjmgOZJDc8mFJT9huZoisVP+z9SNpiZ36JqFrB70xRhXqxK0LA1lMWnEswxPZAMdyR3zQ1n43EaAPlprMH1ESsKOM5lZnKh32JZcJc2y2p4cQ/ugpBRnuot3xQtRB5DjrRU6PmCEb7RY6WIt0lRczkq97NEuZm2Ndz+V9f7I5K/epvvjBcM4BvAiKPlXhgvDSsW+UKPNQyar8Hvs9MOJ4/RzfptX0Ta7AMkSEdy7guDVepCIYFEpIW8WB3mWRU2Ia0bnjCg=="
-	config.ListenAddr = "127.0.0.1:4433"
-	config.RemoteAddr = "104.237.141.191:443"
+	// config.Password = "yshAwgIkaoBDJw2lq1yNUsZXu8vNPJP57LfvNmDphbXX23a6O4ZfnCAMBJ7TtL96LYPaeah15z8Gny9tjmgOZJDc8mFJT9huZoisVP+z9SNpiZ36JqFrB70xRhXqxK0LA1lMWnEswxPZAMdyR3zQ1n43EaAPlprMH1ESsKOM5lZnKh32JZcJc2y2p4cQ/ugpBRnuot3xQtRB5DjrRU6PmCEb7RY6WIt0lRczkq97NEuZm2Ndz+V9f7I5K/epvvjBcM4BvAiKPlXhgvDSsW+UKPNQyar8Hvs9MOJ4/RzfptX0Ta7AMkSEdy7guDVepCIYFEpIW8WB3mWRU2Ia0bnjCg=="
+	// config.ListenAddr = "127.0.0.1:4433"
+	// // config.RemoteAddr = "104.237.141.191:4433"
+	// config.RemoteAddr = "47.75.135.177:443"
 
 	// 启动 local 端并监听
 	lsLocal, err := lightsocks.NewLsLocal(config.Password, config.ListenAddr, config.RemoteAddr)

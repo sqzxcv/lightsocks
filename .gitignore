@@ -5,3 +5,4 @@ config.json
 dist/
 docker/.lightsocks.json
 /cmd/lightsocks-local/lightsocks-local
+/cmd/lightsocks-server/lightsocks-server
