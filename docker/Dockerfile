@@ -7,12 +7,12 @@ ARG TZ="Asia/Shanghai"
 ENV TZ ${TZ}
 ENV LIGHTSOCKS_VERSION 1.0.6
 # ENV LIGHTSOCKS_DOWNLOAD_URL https://github.com/sqzxcv/lightsocks/releases/download/${LIGHTSOCKS_VERSION}/lightsocks_${LIGHTSOCKS_VERSION}_linux_amd64.tar.gz
-ENV LIGHTSOCKS_DOWNLOAD_URL https://codeload.github.com/sqzxcv/lightsocks/zip/master
+ENV LIGHTSOCKS_DOWNLOAD_URL https://github.com/sqzxcv/lightsocks/releases/download/2.0.0/lightsocks-server
 RUN apk upgrade --update \
     && apk add bash tzdata curl tar \
     && curl -sSLO ${LIGHTSOCKS_DOWNLOAD_URL} \
     # && tar -zxf lightsocks_${LIGHTSOCKS_VERSION}_linux_amd64.tar.gz \
-    && mv lightsocks-local lightsocks-server /usr/local/bin \
+    && mv lightsocks-server /usr/local/bin \
     && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
     && echo ${TZ} > /etc/timezone 
     # && apk del curl tar \
