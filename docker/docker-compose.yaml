@@ -1,7 +1,7 @@
 version: '2' 
 services:
   lightsocks:
-    image: mritd/lightsocks
+    image: xxxooo
     restart: always
     volumes: 
       - ./:/root
